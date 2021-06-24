@@ -1,4 +1,4 @@
-let frieds = [
+let friends = [
     {id: 1, name: "Dima", age: 32, isMarried: true, scores: 44},
     {id: 2, name: "Alena", age: 30, isMarried: true, scores: 95},
     {id: 3, name: "Denis", age: 22, isMarried: false, scores: 23},
@@ -22,10 +22,10 @@ function itMap(arr, callbackFn) {
 //console.log(frieds.map(frieds => frieds.name.length))
 
 // forEach
-frieds.forEach(function (value, index) {
+friends.forEach(function (value, index) {
     //console.log(`index ${index} , el: ${value.name}`)
 })
-frieds.forEach(function (value) {
+friends.forEach(function (value) {
     //console.log(`name ${value.name} , age: ${value.age}`)
 })
 
@@ -48,8 +48,8 @@ function itFilter(arr, callbackFn) {
     }
     return newArr
 }
-let arr = frieds.filter(st => st.age < 20)
-let arrName = frieds.filter(st => st.name.length > 3)
+let arr = friends.filter(st => st.age < 20)
+let arrName = friends.filter(st => st.name.length > 3)
 // console.log(arr)
 // console.log(arrName)
 
@@ -62,4 +62,4 @@ function itFind(arr, callbackFn) {
         }
     }
 }
-console.log(itFind(frieds, fr => fr.name === "Alena"))
+console.log(itFind(friends, fr => fr.name === "Alena"))
