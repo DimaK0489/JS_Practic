@@ -9,7 +9,7 @@ for (let i = 0; i < array.length; i++) {
         }
     }
 }
-//console.log(array)
+console.log(array)
 
 const friendsName = ["Dima", "Alena", "Oleg", "Denis", "?", "0", "Lera"]
 //console.log(friendsName.sort());

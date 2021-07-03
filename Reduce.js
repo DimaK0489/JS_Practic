@@ -50,10 +50,10 @@ const score = friends.reduce( (acc, fr) => {
 //console.log(score)
 
 const topFriends = friends.reduce( (acc, f) => {
-    const newFr = {...f, score: f.scores + 10}
+    const newFr = {...f, scores: f.scores + 10}
     acc.push(newFr)
     return acc
 },[])
-//console.log(topFriends)
+console.log(topFriends)
 
 

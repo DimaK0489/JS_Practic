@@ -19,7 +19,7 @@ function itMap(arr, callbackFn) {
     }
     return newArr
 }
-//console.log(frieds.map(frieds => frieds.name.length))
+//console.log(friends.map(friends => friends.name.length))
 
 // forEach
 friends.forEach(function (value, index) {
@@ -31,12 +31,13 @@ friends.forEach(function (value) {
 
 //деструктуризация
 const incAge = fr => ({...fr, age: fr.age + 1}) // сокращенный код
-/*function incAge(fr) {
+function incAge2(fr) {
     const copySt = {...fr}
     copySt.age += 1
     return copySt
-}*/
-// console.log(itMap(frieds, incAge) === frieds) //false
+}
+ // console.log(itMap(friends, incAge) === friends) //false
+ // console.log(itMap(friends, incAge2) === friends) //false
 
 // filter под капотом
 function itFilter(arr, callbackFn) {
@@ -62,4 +63,4 @@ function itFind(arr, callbackFn) {
         }
     }
 }
-console.log(itFind(friends, fr => fr.name === "Alena"))
+//console.log(itFind(friends, fr => fr.name === "Alena"))

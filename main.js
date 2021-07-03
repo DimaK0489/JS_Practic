@@ -107,3 +107,22 @@ const oldFriends = friends.reduce( (acc, fr) => acc.age > fr.age ? acc : fr)
 //13. Сумма баллов всех друзей
 const sumFriends = friends.reduce((acc,fr) => acc + fr.scores,0)
 //console.log(sumFriends)
+
+//14.Напишите функцию addFriends, которая принимает параметром массив friends
+// и добавляет в каждому другу свойство "friends",
+// значением которого является массив имён всех остальных friends из массива,
+// за исключением собственного имени
+const addFriends = (friends) => {
+    const allName=friends.map(s => s.name)
+
+    const newFriends = friends.map(fr => {
+        return {
+            ...fr,
+            friends: allName.filter(name => name !== fr.name)
+        }
+    })
+
+    return newFriends
+}
+console.log(addFriends(friends))
+
