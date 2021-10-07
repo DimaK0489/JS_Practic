@@ -113,7 +113,7 @@ const sumFriends = friends.reduce((acc,fr) => acc + fr.scores,0)
 // значением которого является массив имён всех остальных friends из массива,
 // за исключением собственного имени
 const addFriends = (friends) => {
-    const allName=friends.map(s => s.name)
+    const allName = friends.map(s => s.name)
 
     const newFriends = friends.map(fr => {
         return {
