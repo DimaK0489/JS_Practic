@@ -4,6 +4,10 @@ console.log(10 * '4'); // 40
 console.log(10 - '4'); // 6
 console.log(true + true); // будет 2, потому что true приводится к единице(1)
 console.log([20, 4, 4] + {}); // 20,4,4 [obj, obj]-объект приводиться к строке
+console.log((true + false) === (2 + false)) // преобразование к числу 1 === 2 => false
+console.log(true & true) // 1
+console.log(false & false) // 0
+console.log(false & true) // 0
 
 // Task 2
 const user = {
@@ -101,3 +105,13 @@ const getIndexElement = (arr) => {
     return [resNum, resInd]
 }
 console.log(getIndexElement(arr))
+
+// Task 7
+foo() // выполнится, компилятор запомнит что есть такой вызов и ф-ия
+bar() // expression, можно вызвать только после самой ф-ии
+function foo () {
+    console.log("foo")
+}
+const bar = function () {
+    console.log('bar')
+}
