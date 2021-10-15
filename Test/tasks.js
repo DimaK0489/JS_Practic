@@ -50,7 +50,7 @@ console.log(admin.name) //Dima
 console.log(dev.name) // Denis ссылается на глобальный объект, если вызвать через new то будет 'Alena'
 
 // Task 4
-const b = {
+let b = {
     name: 'b',
     getName: function () {
         console.log(this.name)
